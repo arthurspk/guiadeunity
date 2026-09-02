@@ -1,0 +1,13 @@
+# Configuração do verificador de links (https://github.com/lycheeverse/lychee)
+# Uso: lychee --no-progress './**/*.md'
+#
+# Domínios excluídos por bloqueio anti-bot ao verificador automatizado (403/999), confirmados
+# manualmente com HTTP 200 via curl com User-Agent de navegador antes de entrar no guia:
+# - linkedin.com: responde 999 a qualquer verificador.
+# - discussions.unity.com: responde 403 ao UA padrão do lychee.
+# - audiokinetic.com (Wwise): responde 403 ao UA padrão do lychee.
+exclude = [
+  "^https://www\\.linkedin\\.com/",
+  "^https://discussions\\.unity\\.com/",
+  "^https://www\\.audiokinetic\\.com/",
+]
